@@ -1,0 +1,79 @@
+REPEATMASKER DATABASES
+
+These are the repeat libraries for the program RepeatMasker. To
+install, move or copy the file "RepeatMaskerLib.embl" into
+the "Libraries" subdirectory of the RepeatMasker directory. 
+
+The RepeatMasker program, maintained by Arian Smit and Robert Hubley
+and copyrighted at the Institute for Systems Biology is distributed
+without its repeat consensus sequence file. These sequence data are
+copyrighted by the Genetic Information Research Institute and are
+available at the website
+http://www.girinst.org/server/RepBase/RepBase.rptmsk.tar.gz. Updates
+of the databases may not always coincide with software updates Check
+on this site or our server (www.repeatmasker.org) if a newer database
+version is available.
+
+
+INCOMPATIBILITY WITH OLDER VERSIONS OF REPEATMASKER
+
+Whereas previous versions used multiple files with repeat consensus
+sequences, RepeatMasker-open-3.1.2 of Oct 2005 and later versions use a
+single EMBL file combining all types of repeats found in all different
+species. The program creates a species specific set of repeat files
+upon the first use of a species. This new format will be maintained
+for the foreseeable future.
+
+This (necessary) change in formatting unfortunately creates a backward
+incompatibility. Older versions of the program do not work with the
+new library file and vice versa. To download the last version of
+RepeatMasker please visit www.repeatmasker.org
+
+
+SPECIES COVERAGE
+
+The RepeatMasker software package contains in the util directory the
+script queryRepeatDatabase.pl that will print or list all repeats
+included in an analysis for an indicated species. If your query
+species is not covered or if you have a larger set of repeats
+available, you can create your own libraries and use these with
+RepeatMasker using the -lib option.
+
+
+RELATONSHIP WITH REPBASE UPDATE
+
+We're maintaining these libraries as co-editor of Repbase Update, and
+are trying to keep them in synch with the RepBase Update libraries.
+However, at any one time there are differences.  Entries can differ
+somewhat in sequence, generally not by more than a few percent.
+Reasons for this are that occasionally, independently derived
+consensus sequences thrive in either database or that updates to
+consensus sequences don't make it immediately to RepBase. The
+nomenclature is by and large identical, but we're aware of
+discrepancies and are attempting to eliminate these. One unavoidable
+origin of these differences is RepeatMasker's extensive post-alignment
+processing (=improvement) of the repeat annotation. To give one of
+many examples, internal sequences of LTR elements can be named after
+the flanking LTRs, even if there is no specific entry for that element
+in the databases.
+
+Quite a few entries in these libraries are not yet in the EMBL
+formatted RepBase Update (RU) because we have not yet submitted them
+formally. Others are missing from RU because it does not include all
+known subfamilies. On the other hand, a few RU entries may be missing
+from RepeatMasker libraries because our releases are lagging and
+longer in between the RU releases (the 'version' file tells you which
+is the last version of RU that is included in the current file). Also,
+we do extra curation, and exclude entries in RU that give rise to
+false positives, would mask genes, or do not appear to be repetitive
+after all.
+
+Arian Smit PhD
+Institute for Systems Biology
+Seattle, WA
+asmit@systemsbiology.org
+
+RepeatMasker software and database development and maintenance are
+currently funded by an NIH/NHGRI R01 grant HG02939-01 to Arian Smit.
+RepBase Update development and maintenance are funded by NIH/NLM grant
+No.2P41LM006252-07A1 to Jerzy Jurka.

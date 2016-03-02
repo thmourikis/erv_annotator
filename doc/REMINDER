@@ -1,0 +1,34 @@
+1) Change references to add micropia and gypsy
+
+** The above files, if needed to be replaced should be compiled, renamed blast+, gt, and exonerate and placed in linux dist folder
+2) blast+ > 2.2.29
+3) gt > 1.5.1
+4) exonerate > 2.2.0
+
+
+
+
+## GENERAL NOTES
+## Make sure you have RepeatMasker and GenomeTools installed
+## Check manuals for parameter settings
+## Currently operatinf with mammal db of RM
+## Make configuration file path environment variable
+## Command to check db size
+## SELECT table_schema "Data Base Name", sum( data_length + index_length ) / 1024 / 1024 "Data Base
+## Size in MB" FROM information_schema.TABLES GROUP BY table_schema ;
+
+
+## Merge databases in one
+## Run mysqldump on each database with the --no-create-info option to avoid writing schema information. Then run once on one
+## database with the --no-data option. If you load all of these files sequentially into the same target database, this should
+## work, barring any differences in schema between the two databases or duplicate primary keys.
+
+## mysqldump -u root -p --no-create-info database1 > database1.sql
+## mysqldump -u root -p --no-create-info database2 > database2.sql
+## mysqldump -u root -p --no-data database1 > schema.sql
+## After creating a new database, run
+
+## mysql -uroot -p -Ddatabase3 < schema.sql
+## mysql -uroot -p -Ddatabase3 < database1.sql
+## mysql -uroot -p -Ddatabase3 < database2.sql
+##############################################################################################################################
